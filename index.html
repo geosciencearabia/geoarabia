@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GeoArabia - Coming Soon</title>
+  <meta name="description" content="GeoArabia (Geoscience Arabia) is launching soon. Register your interest to join the GeoArabia community." />
+  <meta property="og:title" content="GeoArabia - Coming Soon" />
+  <meta property="og:description" content="GeoArabia (Geoscience Arabia) is launching soon. Register your interest to join the GeoArabia community." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #0f172a;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8; /* cyan-400 */
+      --accent-strong: #0ea5e9; /* sky-500 */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 70% -10%, rgba(56,189,248,.15), transparent 60%),
+                  radial-gradient(1000px 600px at -10% 110%, rgba(14,165,233,.2), transparent 60%),
+                  var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .wrap {
+      width: min(960px, 100%);
+    }
+    .card {
+      background: color-mix(in oklab, var(--card) 88%, black 12%);
+      border: 1px solid rgba(148,163,184,.2);
+      border-radius: 20px;
+      padding: clamp(24px, 4vw, 48px);
+      box-shadow: 0 10px 40px rgba(2,6,23,.45), inset 0 1px 0 rgba(255,255,255,.03);
+      position: relative;
+      overflow: hidden;
+    }
+    .glow {
+      position: absolute;
+      inset: -20%;
+      background: radial-gradient(500px 240px at 30% 0%, rgba(56,189,248,.12), transparent 70%),
+                  radial-gradient(400px 200px at 90% 60%, rgba(14,165,233,.12), transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(10px);
+    }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.2px; }
+    .logo { width: 36px; height: 36px; border-radius: 9px; background: linear-gradient(135deg, var(--accent-strong), var(--accent)); box-shadow: 0 6px 24px rgba(56,189,248,.45); }
+    main { position: relative; z-index: 1; }
+
+    h1 { font-size: clamp(2rem, 3.8vw, 3.25rem); line-height: 1.05; margin: 6px 0 14px; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      font-size: 14px; color: var(--text);
+      background: rgba(56,189,248,.12);
+      border: 1px solid rgba(56,189,248,.35);
+    }
+    p.lead { color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.125rem); margin: 0 0 22px; max-width: 60ch; }
+
+    .cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(14,165,233,.5);
+      background: linear-gradient(180deg, rgba(14,165,233,.18), rgba(2,6,23,.0));
+      color: white; font-weight: 600; text-decoration: none;
+      transition: transform .08s ease, box-shadow .2s ease, background .3s ease;
+      box-shadow: 0 10px 30px rgba(14,165,233,.25);
+    }
+    .cta:hover { transform: translateY(-1px); box-shadow: 0 16px 36px rgba(14,165,233,.35); }
+    .cta:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 3px; }
+    .cta svg { width: 18px; height: 18px; }
+
+    .subtle { margin-top: 14px; color: #a8b3c7; font-size: 14px; }
+    footer { margin-top: 28px; color: #8aa0b6; font-size: 13px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+    /* Responsive niceties */
+    @media (max-width: 480px) {
+      header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-labelledby="coming-soon-title">
+      <div class="glow" aria-hidden="true"></div>
+
+      <header>
+        <div class="brand" aria-label="Brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>GeoArabia</span>
+        </div>
+      </header>
+
+      <main>
+        <span class="tag" aria-label="Status">🚀 Coming Soon</span>
+        <h1 id="coming-soon-title">Join the GeoArabia Community</h1>
+        <p class="lead">Geoscience Arabia is almost here. Be part of the GeoArabia community—register your interest today and be the first to know when we launch.</p>
+
+        <a
+          class="cta"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe0kLkhloMlviuRWSfKp6s1xrSTtp9UI-t7n_TF9U4Hvi9wrQ/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Register your interest in GeoArabia (opens in a new tab)"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 7h5.586l-9.293 9.293 1.414 1.414L20 8.414V14h2V5a1 1 0 0 0-1-1h-9v2Zm6 12H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6V2H5a3 3 0 0 0-3 3v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-6h-2v6Z"/></svg>
+          <span>Register for GeoArabia Community</span>
+        </a>
+
+      </main>
+
+      <footer>
+        <span>© <span id="year"></span> Digital Geosciences. All rights reserved.</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
